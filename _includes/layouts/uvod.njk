@@ -1,0 +1,35 @@
+{% include 'partials/page-top.njk' %}
+
+	<div class= "kontejner">
+
+		<main class="main">
+
+
+			{{ content |safe  }}
+
+
+		</main>
+
+		<aside class="sidebar">
+			<h3>Co čeká v deníku</h3>
+
+			<hr>
+			<h3>Nejnovější blog</h3>
+
+
+			{% for clanek in collections.clanky | reverse %}
+			{% if loop.index <= 1 %}
+
+			<h4> {{ clanek.data.title}}</h4>
+
+			<p>{{ clanek.data.perex }}</p>
+			{% endif %}
+		{% endfor %}
+
+			<p>lorem kdkfddddddddddddddddddddslgLKSJHAKGJKNMSNFMSNFMSN</p>
+
+		</aside>
+
+	</div>
+
+	{% include 'partials/page-bottom.njk' %}

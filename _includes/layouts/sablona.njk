@@ -1,0 +1,21 @@
+{% include 'partials/page-top.njk' %}
+
+
+	<main class="main">
+
+		<!--{% if title === "Památky" %}
+		
+		<hr>
+		<h3>Toto je stránka s památkama. Johohooooo</h3>
+		{% endif %}-->
+		<hr>
+
+		{{ content |safe  }}
+        
+        
+    </main>
+
+
+	{% include 'partials/page-bottom.njk' %}
+
+	

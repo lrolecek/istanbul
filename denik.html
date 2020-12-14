@@ -1,0 +1,29 @@
+---
+layout: layouts/sablona
+title: Deník
+menu: denik
+---
+
+<h1>Deník</h1>
+<hr>
+
+{% for clanek in collections.clanky  | reverse  %}
+
+
+<h3>
+    <a  href="{{clanek.url}}">{{ clanek.data.title}}</a>
+</h3>
+
+<p>
+{{clanek.data.perex}}
+</p>
+
+  <!--
+<p>
+  {{clanek.templateContent | striptags() | truncate(50)}}
+
+</p>
+-->
+
+
+{% endfor %}
